@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="signup.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script>
-        window.onload = function() {
-            // Get the username from the URL query parameter
-            const urlParams = new URLSearchParams(window.location.search);
-            const username = urlParams.get('username');
+       
+        function redirectAfterSignup() {
+           
 
-            // Display the username on the page
-            const usernameElement = document.getElementById('username');
-            usernameElement.textContent = username;
+            
+            var username = document.getElementById('username').value;
+
+            window.location.href = 'products.html?username=' + encodeURIComponent(username);
+
+           
+            return false;
         }
     </script>
 </head>
